@@ -1,0 +1,16 @@
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\Debug\net8.0-windows\STIPerformanceAnalytics.exe
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\Debug\net8.0-windows\STIPerformanceAnalytics.deps.json
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\Debug\net8.0-windows\STIPerformanceAnalytics.runtimeconfig.json
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\Debug\net8.0-windows\STIPerformanceAnalytics.dll
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\Debug\net8.0-windows\STIPerformanceAnalytics.pdb
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.Form1.resources
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.vbproj.GenerateResource.cache
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.AssemblyInfoInputs.cache
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.AssemblyInfo.vb
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.vbproj.CoreCompileInputs.cache
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.dll
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\refint\STIPerformanceAnalytics.dll
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.pdb
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.genruntimeconfig.cache
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\ref\STIPerformanceAnalytics.dll
