@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("STIPerformanceAnalytics"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7a2d606271c0d1f7fe24667961ca21d6f1d076a"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c220e9b940642eefac7cf578206e89c0a36cfa6c"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("STIPerformanceAnalytics"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("STIPerformanceAnalytics"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

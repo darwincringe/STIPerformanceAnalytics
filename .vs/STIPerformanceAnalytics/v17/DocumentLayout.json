@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|c:\\users\\darwi\\source\\repos\\stiperformanceanalytics\\stiperformanceanalytics\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|solutionrelative:stiperformanceanalytics\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|c:\\users\\darwi\\source\\repos\\stiperformanceanalytics\\stiperformanceanalytics\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|solutionrelative:stiperformanceanalytics\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|c:\\users\\darwi\\source\\repos\\stiperformanceanalytics\\stiperformanceanalytics\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|solutionrelative:stiperformanceanalytics\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|c:\\users\\darwi\\source\\repos\\stiperformanceanalytics\\stiperformanceanalytics\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|solutionrelative:stiperformanceanalytics\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|c:\\users\\darwi\\source\\repos\\stiperformanceanalytics\\stiperformanceanalytics\\program.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{997B34ED-FA79-4A5B-8067-B1DD57A40B28}|STIPerformanceAnalytics\\STIPerformanceAnalytics.vbproj|solutionrelative:stiperformanceanalytics\\program.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,27 +26,40 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\Form1.vb",
-              "RelativeDocumentMoniker": "STIPerformanceAnalytics\\Form1.vb",
-              "ToolTip": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\Form1.vb",
-              "RelativeToolTip": "STIPerformanceAnalytics\\Form1.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAMAAAALAAAA",
+              "DocumentIndex": 2,
+              "Title": "Program.vb",
+              "DocumentMoniker": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\Program.vb",
+              "RelativeDocumentMoniker": "STIPerformanceAnalytics\\Program.vb",
+              "ToolTip": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\Program.vb",
+              "RelativeToolTip": "STIPerformanceAnalytics\\Program.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-28T06:04:12.751Z",
+              "WhenOpened": "2024-05-29T15:09:26.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\Form1.vb",
-              "RelativeDocumentMoniker": "STIPerformanceAnalytics\\Form1.vb",
-              "ToolTip": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\Form1.vb [Design]",
-              "RelativeToolTip": "STIPerformanceAnalytics\\Form1.vb [Design]",
+              "Title": "MainForm.vb",
+              "DocumentMoniker": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\MainForm.vb",
+              "RelativeDocumentMoniker": "STIPerformanceAnalytics\\MainForm.vb",
+              "ToolTip": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\MainForm.vb",
+              "RelativeToolTip": "STIPerformanceAnalytics\\MainForm.vb",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDYAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-28T05:26:40.167Z",
+              "WhenOpened": "2024-05-29T15:07:10.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\MainForm.vb",
+              "RelativeDocumentMoniker": "STIPerformanceAnalytics\\MainForm.vb",
+              "ToolTip": "C:\\Users\\darwi\\source\\repos\\STIPerformanceAnalytics\\STIPerformanceAnalytics\\MainForm.vb [Design]",
+              "RelativeToolTip": "STIPerformanceAnalytics\\MainForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-29T15:07:05.879Z",
               "EditorCaption": " [Design]"
             }
           ]
