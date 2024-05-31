@@ -32,3 +32,6 @@ C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\
 C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.vbproj.AssemblyReference.cache
 C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerfo.68396654.Up2Date
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.StudentHome.resources
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.Resources.resources

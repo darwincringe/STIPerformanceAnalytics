@@ -22,29 +22,21 @@ Partial Class AdminLoginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminLoginForm))
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         StatusStrip1 = New StatusStrip()
         ToolStripStatusLabel1 = New ToolStripStatusLabel()
         Label3 = New Label()
         Label2 = New Label()
-        TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        txtPassword = New TextBox()
+        txtUsername = New TextBox()
         LinkLabel1 = New LinkLabel()
-        loginButton = New Button()
+        btnLogin = New Button()
         Label4 = New Label()
+        PictureBox1 = New PictureBox()
         StatusStrip1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(196, 21)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(385, 40)
-        Label1.TabIndex = 9
-        Label1.Text = "STI Performance Analytics "
         ' 
         ' StatusStrip1
         ' 
@@ -65,7 +57,7 @@ Partial Class AdminLoginForm
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(196, 145)
+        Label3.Location = New Point(208, 288)
         Label3.Name = "Label3"
         Label3.Size = New Size(69, 17)
         Label3.TabIndex = 15
@@ -75,55 +67,66 @@ Partial Class AdminLoginForm
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(196, 116)
+        Label2.Location = New Point(208, 259)
         Label2.Name = "Label2"
         Label2.Size = New Size(72, 17)
         Label2.TabIndex = 14
         Label2.Text = "Username:"
         ' 
-        ' TextBox2
+        ' txtPassword
         ' 
-        TextBox2.Location = New Point(274, 144)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(307, 23)
-        TextBox2.TabIndex = 13
+        txtPassword.Location = New Point(286, 287)
+        txtPassword.Name = "txtPassword"
+        txtPassword.PasswordChar = "*"c
+        txtPassword.Size = New Size(307, 23)
+        txtPassword.TabIndex = 13
         ' 
-        ' TextBox1
+        ' txtUsername
         ' 
-        TextBox1.Location = New Point(274, 115)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(307, 23)
-        TextBox1.TabIndex = 12
+        txtUsername.Location = New Point(286, 258)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(307, 23)
+        txtUsername.TabIndex = 12
         ' 
         ' LinkLabel1
         ' 
         LinkLabel1.AutoSize = True
         LinkLabel1.Font = New Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        LinkLabel1.Location = New Point(196, 226)
+        LinkLabel1.Location = New Point(208, 369)
         LinkLabel1.Name = "LinkLabel1"
         LinkLabel1.Size = New Size(104, 17)
         LinkLabel1.TabIndex = 11
         LinkLabel1.TabStop = True
         LinkLabel1.Text = "Login as student?"
         ' 
-        ' loginButton
+        ' btnLogin
         ' 
-        loginButton.Location = New Point(495, 223)
-        loginButton.Name = "loginButton"
-        loginButton.Size = New Size(86, 25)
-        loginButton.TabIndex = 10
-        loginButton.Text = "Login"
-        loginButton.UseVisualStyleBackColor = True
+        btnLogin.Location = New Point(507, 366)
+        btnLogin.Name = "btnLogin"
+        btnLogin.Size = New Size(86, 25)
+        btnLogin.TabIndex = 10
+        btnLogin.Text = "Login"
+        btnLogin.UseVisualStyleBackColor = True
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(196, 61)
+        Label4.Location = New Point(208, 210)
         Label4.Name = "Label4"
         Label4.Size = New Size(79, 30)
         Label4.TabIndex = 17
         Label4.Text = "Admin"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(271, 23)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(296, 169)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 18
+        PictureBox1.TabStop = False
         ' 
         ' AdminLoginForm
         ' 
@@ -131,31 +134,31 @@ Partial Class AdminLoginForm
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(Label4)
-        Controls.Add(Label1)
+        Controls.Add(PictureBox1)
         Controls.Add(StatusStrip1)
         Controls.Add(Label3)
         Controls.Add(Label2)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        Controls.Add(txtPassword)
+        Controls.Add(txtUsername)
         Controls.Add(LinkLabel1)
-        Controls.Add(loginButton)
+        Controls.Add(btnLogin)
         Name = "AdminLoginForm"
         Text = "AdminLoginForm"
         StatusStrip1.ResumeLayout(False)
         StatusStrip1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents loginButton As Button
+    Friend WithEvents btnLogin As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
