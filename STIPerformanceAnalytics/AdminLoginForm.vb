@@ -1,11 +1,4 @@
 ﻿Public Class AdminLoginForm
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Dim loginForm As New Form1()
@@ -28,8 +21,6 @@
 
         If LoginModule.ValidateLogin(username, password, userType) Then
             MessageBox.Show("Login successful!")
-            ' Hide login form and show main form
-            ' Me.Hide()
             ResetInputs()
         Else
             MessageBox.Show("Invalid username or password.")
@@ -38,8 +29,6 @@
 
     Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Enter Then
-            ' Perform your desired action here
-            ' For example, you can trigger the login process
             btnLogin_Click(sender, e)
         End If
     End Sub
@@ -51,6 +40,6 @@
 
     Public Sub New()
         InitializeComponent()
-        Me.KeyPreview = True ' Enable key preview for the form
+        Me.KeyPreview = True
     End Sub
 End Class
