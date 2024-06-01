@@ -31,6 +31,12 @@ Partial Class StudentHome
         Panel1 = New Panel()
         Label6 = New Label()
         TabPage2 = New TabPage()
+        Button2 = New Button()
+        textPassword = New TextBox()
+        Label10 = New Label()
+        textPasswordConfirmation = New TextBox()
+        Label11 = New Label()
+        Label12 = New Label()
         textUsername = New TextBox()
         Label9 = New Label()
         textBirthdate = New TextBox()
@@ -123,6 +129,12 @@ Partial Class StudentHome
         ' 
         ' TabPage2
         ' 
+        TabPage2.Controls.Add(Button2)
+        TabPage2.Controls.Add(textPassword)
+        TabPage2.Controls.Add(Label10)
+        TabPage2.Controls.Add(textPasswordConfirmation)
+        TabPage2.Controls.Add(Label11)
+        TabPage2.Controls.Add(Label12)
         TabPage2.Controls.Add(textUsername)
         TabPage2.Controls.Add(Label9)
         TabPage2.Controls.Add(textBirthdate)
@@ -145,17 +157,72 @@ Partial Class StudentHome
         TabPage2.Text = "User Information"
         TabPage2.UseVisualStyleBackColor = True
         ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(572, 131)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(118, 23)
+        Button2.TabIndex = 10
+        Button2.Text = "Change Password"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' textPassword
+        ' 
+        textPassword.Location = New Point(513, 65)
+        textPassword.Name = "textPassword"
+        textPassword.PasswordChar = "*"c
+        textPassword.Size = New Size(177, 23)
+        textPassword.TabIndex = 8
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Location = New Point(367, 66)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(115, 21)
+        Label10.TabIndex = 69
+        Label10.Text = "New Password:"
+        ' 
+        ' textPasswordConfirmation
+        ' 
+        textPasswordConfirmation.Location = New Point(513, 96)
+        textPasswordConfirmation.Name = "textPasswordConfirmation"
+        textPasswordConfirmation.PasswordChar = "*"c
+        textPasswordConfirmation.Size = New Size(177, 23)
+        textPasswordConfirmation.TabIndex = 9
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(367, 97)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(140, 21)
+        Label11.TabIndex = 67
+        Label11.Text = "Confirm Password:"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Location = New Point(364, 20)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(166, 30)
+        Label12.TabIndex = 66
+        Label12.Text = "Security Settings"
+        ' 
         ' textUsername
         ' 
         textUsername.Location = New Point(140, 65)
         textUsername.Name = "textUsername"
         textUsername.Size = New Size(177, 23)
-        textUsername.TabIndex = 39
+        textUsername.TabIndex = 1
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.Location = New Point(23, 63)
         Label9.Name = "Label9"
         Label9.Size = New Size(84, 21)
@@ -167,14 +234,14 @@ Partial Class StudentHome
         textBirthdate.Location = New Point(140, 193)
         textBirthdate.Name = "textBirthdate"
         textBirthdate.Size = New Size(177, 23)
-        textBirthdate.TabIndex = 37
+        textBirthdate.TabIndex = 5
         ' 
         ' btnUpdate
         ' 
         btnUpdate.Location = New Point(242, 268)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(75, 23)
-        btnUpdate.TabIndex = 36
+        btnUpdate.TabIndex = 7
         btnUpdate.Text = "Update"
         btnUpdate.UseVisualStyleBackColor = True
         ' 
@@ -183,33 +250,33 @@ Partial Class StudentHome
         textEmail.Location = New Point(140, 225)
         textEmail.Name = "textEmail"
         textEmail.Size = New Size(177, 23)
-        textEmail.TabIndex = 35
+        textEmail.TabIndex = 6
         ' 
         ' textLastname
         ' 
         textLastname.Location = New Point(140, 160)
         textLastname.Name = "textLastname"
         textLastname.Size = New Size(177, 23)
-        textLastname.TabIndex = 33
+        textLastname.TabIndex = 4
         ' 
         ' textMiddlename
         ' 
         textMiddlename.Location = New Point(140, 126)
         textMiddlename.Name = "textMiddlename"
         textMiddlename.Size = New Size(177, 23)
-        textMiddlename.TabIndex = 32
+        textMiddlename.TabIndex = 3
         ' 
         ' textFirstname
         ' 
         textFirstname.Location = New Point(140, 96)
         textFirstname.Name = "textFirstname"
         textFirstname.Size = New Size(177, 23)
-        textFirstname.TabIndex = 31
+        textFirstname.TabIndex = 2
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label8.Location = New Point(23, 124)
         Label8.Name = "Label8"
         Label8.Size = New Size(100, 21)
@@ -229,7 +296,7 @@ Partial Class StudentHome
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(23, 158)
         Label7.Name = "Label7"
         Label7.Size = New Size(80, 21)
@@ -239,7 +306,7 @@ Partial Class StudentHome
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(23, 94)
         Label1.Name = "Label1"
         Label1.Size = New Size(82, 21)
@@ -249,7 +316,7 @@ Partial Class StudentHome
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(23, 191)
         Label2.Name = "Label2"
         Label2.Size = New Size(76, 21)
@@ -259,7 +326,7 @@ Partial Class StudentHome
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(23, 223)
         Label3.Name = "Label3"
         Label3.Size = New Size(51, 21)
@@ -277,7 +344,7 @@ Partial Class StudentHome
         ' 
         ' StudentHome
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(btnLogout)
@@ -322,4 +389,10 @@ Partial Class StudentHome
     Friend WithEvents textBirthdate As TextBox
     Friend WithEvents textUsername As TextBox
     Friend WithEvents Label9 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents textPassword As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents textPasswordConfirmation As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
 End Class

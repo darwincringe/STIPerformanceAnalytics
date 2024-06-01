@@ -19,7 +19,7 @@ Module LoginModule
                         If BCrypt.Net.BCrypt.Verify(password, storedHash) Then
                             Console.WriteLine("Login Success")
 
-                            User.SetUser(
+                            user.SetUser(
                                 reader("username").ToString(),
                                 reader("firstname").ToString(),
                                 reader("lastname").ToString(),
@@ -27,7 +27,7 @@ Module LoginModule
                                 DateTime.Parse(reader("birthdate").ToString()),
                                 reader("email").ToString(),
                                 reader("type").ToString(),
-                                reader("id").ToString().PadLeft(4, "0"c)
+                                reader("id").ToString().PadLeft(5, "0"c)
                             )
 
                             MessageBox.Show("Welcome back, " & User.FirstName)

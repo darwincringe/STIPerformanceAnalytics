@@ -205,8 +205,8 @@ Public Class StudentHome
     End Class
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
-        Dim userModule As New UserModule()
-        Dim userId As String = user.UserId
+        Dim userModule As New UserModule
+        Dim userId = user.UserId
 
         If userModule.UpdateUser(
             userId,
@@ -221,5 +221,13 @@ Public Class StudentHome
             InitializeForm()
             MessageBox.Show("User information updated successfully.")
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim newPassword As String = textPassword.Text
+        Dim confirmPassword As String = textPasswordConfirmation.Text
+        Dim userId As Integer = user.UserId
+
+        user.ChangePassword(userId, newPassword, confirmPassword)
     End Sub
 End Class

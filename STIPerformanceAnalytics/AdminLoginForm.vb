@@ -6,10 +6,6 @@
         Me.Hide()
     End Sub
 
-    Private Sub AdminLoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub AdminLoginForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
     End Sub
@@ -20,8 +16,9 @@
         Dim userType As String = "admin"
 
         If LoginModule.ValidateLogin(username, password, userType) Then
-            MessageBox.Show("Login successful!")
             ResetInputs()
+            Me.Hide()
+            AdminHome.Show()
         Else
             MessageBox.Show("Invalid username or password.")
         End If

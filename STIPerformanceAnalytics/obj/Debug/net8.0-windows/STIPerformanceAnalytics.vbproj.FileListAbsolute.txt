@@ -35,3 +35,7 @@ C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\
 C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.StudentHome.resources
 C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.Resources.resources
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.AdminHome.resources
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.StudentAnswers.resources
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.StudentDetailsUpdate.resources
+C:\Users\darwi\source\repos\STIPerformanceAnalytics\STIPerformanceAnalytics\obj\Debug\net8.0-windows\STIPerformanceAnalytics.StudentDetailCreate.resources

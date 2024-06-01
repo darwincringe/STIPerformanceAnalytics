@@ -141,6 +141,80 @@ Module SurveyModule
         Public Property QuestionId As Integer
         Public Property Answer As String
     End Class
+
+    Public Function GetStudentSurveyAnswers(studentSurveyId As Integer) As List(Of StudentSurveyAnswer)
+        Dim answers As New List(Of StudentSurveyAnswer)()
+        Using connection As New MySqlConnection(Globals.connectionString)
+            Try
+                connection.Open()
+                Dim query As String = "
+            SELECT 
+                id,
+                student_survey_id,
+                question_id,
+                question,
+                answer,
+                type 
+            FROM 
+                student_survey_answers 
+            WHERE 
+                student_survey_id = @studentSurveyId"
+
+                Using cmd As New MySqlCommand(query, connection)
+                    cmd.Parameters.AddWithValue("@studentSurveyId", studentSurveyId)
+
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            Dim answer As New StudentSurveyAnswer()
+                            answer.Id = reader("id")
+                            answer.StudentSurveyId = reader("student_survey_id")
+                            answer.QuestionId = reader("question_id")
+                            answer.Question = reader("question").ToString()
+                            answer.Answer = reader("answer").ToString()
+                            answer.Type = reader("type").ToString()
+                            answers.Add(answer)
+                        End While
+                    End Using
+                End Using
+            Catch ex As MySqlException
+                MessageBox.Show("Error fetching student survey answers: " & ex.Message)
+            End Try
+        End Using
+        Return answers
+    End Function
+
+    Public Function GetAllStudentSurveys() As DataTable
+        Dim connectionString As String = Globals.connectionString
+        Dim dt As New DataTable()
+
+        Using connection As New MySqlConnection(connectionString)
+            Try
+                connection.Open()
+                Dim query As String = "
+                    SELECT 
+                        ss.id,
+                        ss.user_id as student_id,
+                        ss.created_date, 
+                        ss.suggested_degree,
+                        CONCAT(u.firstname, ' ', u.lastname) AS student_name
+                    FROM 
+                        student_surveys ss
+                    JOIN 
+                        users u ON ss.user_id = u.id"
+
+                Using command As New MySqlCommand(query, connection)
+                    Using adapter As New MySqlDataAdapter(command)
+                        adapter.Fill(dt)
+                    End Using
+                End Using
+            Catch ex As MySqlException
+                MessageBox.Show("Error fetching student surveys: " & ex.Message)
+            End Try
+        End Using
+
+        Return dt
+    End Function
+
 End Module
 
 Public Class SurveyQuestion
@@ -148,4 +222,13 @@ Public Class SurveyQuestion
     Public Property Question As String
     Public Property Type As String
     Public Property Choices As List(Of String)
+End Class
+
+Public Class StudentSurveyAnswer
+    Public Property Id As Integer
+    Public Property StudentSurveyId As Integer
+    Public Property QuestionId As Integer
+    Public Property Question As String
+    Public Property Answer As String
+    Public Property Type As String
 End Class

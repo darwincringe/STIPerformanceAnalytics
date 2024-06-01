@@ -1,5 +1,7 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports Microsoft.VisualBasic.ApplicationServices
+Imports MySql.Data.MySqlClient
 Imports System.Text.RegularExpressions
+Imports BCrypt.Net
 
 Public Class UserModule
     Private Shared _username As String
@@ -142,7 +144,6 @@ Public Class UserModule
             Return False
         End If
 
-        ' Validate email format
         Dim emailPattern As String = "^[^@\s]+@[^@\s]+\.[^@\s]+$"
         If Not Regex.IsMatch(email, emailPattern) Then
             MessageBox.Show("Please enter a valid email address.")
@@ -177,6 +178,7 @@ Public Class UserModule
 
         Return True
     End Function
+
     Public Function UpdateUser(userId As String, username As String, firstName As String, middleName As String, lastName As String, email As String, birthdate As String) As Boolean
         If Not ValidateUserInputs(username, firstName, lastName, email, birthdate) Then
             Return False
@@ -221,4 +223,151 @@ Public Class UserModule
             End Try
         End Using
     End Function
+
+    Public Function CreateUser(username As String, firstName As String, middleName As String, lastName As String, email As String, birthdate As String, password As String, confirmPassword As String, isAdmin As Boolean) As Integer
+        If Not ValidateUserInputs(username, firstName, lastName, email, birthdate) Then
+            Return -1
+        End If
+
+        ' Validate password
+        Dim userModule As New UserModule
+        If Not userModule.ValidatePassword(password, confirmPassword) Then
+            Return -2
+        End If
+
+
+        Dim hashedPassword As String = BCrypt.Net.BCrypt.HashPassword(password)
+
+        Dim connectionString As String = Globals.connectionString
+        Using connection As New MySqlConnection(connectionString)
+            Try
+                connection.Open()
+
+                Dim userType As String = If(isAdmin, "admin", "student")
+
+                Dim query As String = "INSERT INTO users (username, firstname, middlename, lastname, email, birthdate, type, password) VALUES (@Username, @Firstname, @Middlename, @Lastname, @Email, @Birthdate, @UserType, @Password)"
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@Username", username)
+                    command.Parameters.AddWithValue("@Firstname", firstName)
+                    command.Parameters.AddWithValue("@Middlename", If(String.IsNullOrWhiteSpace(middleName), DBNull.Value, middleName))
+                    command.Parameters.AddWithValue("@Lastname", lastName)
+                    command.Parameters.AddWithValue("@Email", email)
+                    command.Parameters.AddWithValue("@Birthdate", Date.Parse(birthdate))
+                    command.Parameters.AddWithValue("@UserType", userType)
+                    command.Parameters.AddWithValue("@Password", hashedPassword)
+
+                    command.ExecuteNonQuery()
+
+                    query = "SELECT LAST_INSERT_ID()"
+                    command.CommandText = query
+                    Dim userId As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+                    Return userId
+                End Using
+            Catch ex As MySqlException
+                MessageBox.Show("Error creating user: " & ex.Message)
+                Return -3
+            End Try
+        End Using
+    End Function
+
+    Public Function GetAllStudents() As List(Of Student)
+        Dim students As New List(Of Student)()
+        Using connection As New MySqlConnection(Globals.connectionString)
+            Try
+                connection.Open()
+                Dim query As String = "
+                SELECT 
+                    id,
+                    username,
+                    firstname,
+                    middlename,
+                    lastname,
+                    birthdate,
+                    email
+                FROM 
+                    users 
+                WHERE 
+                    type = 'student'"
+
+                Using cmd As New MySqlCommand(query, connection)
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            Dim student As New Student()
+                            student.Id = Convert.ToInt32(reader("id"))
+                            student.Username = reader("username").ToString()
+                            student.FirstName = reader("firstname").ToString()
+                            student.MiddleName = reader("middlename").ToString()
+                            student.LastName = reader("lastname").ToString()
+                            student.Birthdate = Convert.ToDateTime(reader("birthdate"))
+                            student.Email = reader("email").ToString()
+                            students.Add(student)
+                        End While
+                    End Using
+                End Using
+            Catch ex As MySqlException
+                MessageBox.Show("Error fetching students: " & ex.Message)
+            End Try
+        End Using
+        Return students
+    End Function
+
+    Public Sub DeleteStudent(studentId As Integer)
+        Dim connectionString As String = Globals.connectionString
+        Using connection As New MySqlConnection(connectionString)
+            Try
+                connection.Open()
+                Dim query As String = "DELETE FROM users WHERE id = @StudentId"
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@StudentId", studentId)
+                    command.ExecuteNonQuery()
+                End Using
+            Catch ex As MySqlException
+                MessageBox.Show("Error deleting student: " & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    Public Function ChangePassword(userId As Integer, newPassword As String, confirmPassword As String) As Boolean
+        Dim userModule As New UserModule
+        If Not userModule.ValidatePassword(newPassword, confirmPassword) Then
+            Return False
+        End If
+
+        Dim hashedPassword As String = BCrypt.Net.BCrypt.HashPassword(newPassword)
+
+        Try
+            ' Update the password in the database
+            Using connection As New MySqlConnection(Globals.connectionString)
+                connection.Open()
+                Dim query As String = "UPDATE users SET password = @Password WHERE id = @UserId"
+                Using command As New MySqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@Password", hashedPassword)
+                    command.Parameters.AddWithValue("@UserId", userId)
+                    command.ExecuteNonQuery()
+                End Using
+            End Using
+
+            MessageBox.Show("Password changed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Error updating password: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
+
+    Public Function ValidatePassword(newPassword As String, confirmPassword As String) As Boolean
+        If newPassword.Length < 8 Then
+            MessageBox.Show("Password must be at least 8 characters long.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+
+        If Not newPassword.Equals(confirmPassword) Then
+            MessageBox.Show("Password and password confirmation do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+
+        Return True
+    End Function
+
 End Class
